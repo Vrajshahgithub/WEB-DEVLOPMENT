@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.colorswitcher{
+    display: flex;
+    justify-content: flex-end;   
+}
+.cr{
+    
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.btn{
+    height: 10px;
+    width: 10px;
+    gap: 2rem;
+   border: 1px solid black;
+   border-radius: 10px;
+}
+#white{
+    background-color: white;
+}
+#black{
+    background-color: black;
+}
+#green{
+    background-color: green;
+}
+#pink{
+    background-color: pink;
+}
+.para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+}
+.graphs{
+    height: 100px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+  
+<div class="colorswitcher">
+    <div class="cr">
+    <div class="btn" id="white" onclick="color('#ffffff')"></div>
+    <div class="btn" id="black" onclick="color('#000000')"></div>
+    <div class="btn" id="green" onclick="color('#008000')"></div>
+    <div class="btn" id="pink"  onclick="color('#FFC0CB')"></div>
+    </div>
+</div>
+<div class="para">
+    <div class="graphs">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil atque illo nam voluptatum minima? Fugiat ut at modi ratione atque ullam eum quas, minima maxime velit neque rerum sapiente?</p>
+    </div>
+</div>
+<script>
+    function color(colors)
+    {
+document.body.style.backgroundColor= colors;
+let txt = document.getElementsByTagName("p");
+if(colors == "#000000")
+{
+    for(let el of txt)
+    {
+        el.style.color="white";
+    }
+}else{
+    for(let el of txt)
+    {
+        el.style.color="black";
+    }
+}
+    }
+</script>
+
+</body>
+</html>

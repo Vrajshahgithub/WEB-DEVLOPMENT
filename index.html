@@ -1,85 +1,663 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="javscript.js"></script>
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="index.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>luxeliving</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<style>
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  padding: 0px;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  font-size: 4vh;
+ 
+}
+#header2 {
+  background-color: snow;
+  height: 60px;
+  position: fixed;
+  margin-top: 0px;
+  font-size: 25px;
+}
+#header2 a:hover {
+  color: black;
+}
+.wrapper {
+  width: 1350px;
+  margin: 0 auto;
+}
+nav {
+  float: right;
+  margin: 10px 20px;
+}
+.logo {
+  float: left;
+  line-height: 50px;
+  margin-left: 20px;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  font-size: 34px;
+  color: #333;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+}
+h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #333;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+p {
+  font-size: 17px;
+}
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+a {
+  font-weight: 400;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+hr {
+  height: 4px;
+  width: 70px;
+  text-align: center;
+
+  background: #a7c44c;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 0;
+}
+.btn-custom {
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 3px #859c3c;
+  background-color: #a7c44c;
+  border: 0;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: 17px;
+  border-radius: 12px 0 12px 0;
+  margin-top: 20px;
+  transition: all 0.5s;
+}
+.btn-custom:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #94ae44;
+}
+/* Header Section */
+.intro {
+  display: table;
+  width: 100%;
+  padding: 0;
+  background: url(ynew.jpeg) no-repeat center bottom;
+  background-color: #e5e5e5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.intro h1 {
+  color: #fff;
+  font-size: 68px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+.intro span {
+  color: #a7c44c;
+  font-weight: 600;
+}
+.intro p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+header .intro-text {
+  padding-top: 300px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+/* About Section */
+#about {
+  padding: 120px 0;
+  background: #f6f6f6;
+}
+#about h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#about .about-text {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+#about img {
+  display: inline-block;
+  border-radius: 100px 0 100px 0;
+}
+#about p {
+  line-height: 24px;
+  margin: 15px 0 30px;
+}
+/* Services Section */
+#services {
+  padding: 120px 0;
+}
+#services .service {
+  padding-left: 40px;
+}
+#services img {
+  width: 300px;
+  border-radius: 75px 0 75px 0;
+  box-shadow: 15px 0 #a7c44c;
+}
+#services h3 {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Portfolio Section */
+#portfolio {
+  padding: 120px 0;
+  background: #f6f6f6;
+}
+.categories {
+  padding-bottom: 40px;
+  text-align: center;
+}
+ul.cat li {
+  display: inline-block;
+}
+ol.type li {
+  display: inline-block;
+  margin-left: 20px;
+}
+ol.type li a {
+  color: #a7c44c;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: 2px solid #a7c44c;
+  border-radius: 10px 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+ol.type li a.active {
+  background: #a7c44c;
+  color: #fff;
+}
+ol.type li a:hover {
+  background: #a7c44c;
+  color: #fff;
+}
+/* Team Section */
+#team {
+  color: #fff;
+  background: #a7c44c url(../img/team-bg.jpg) center top no-repeat;
+  background-size: cover;
+}
+#team .overlay {
+  padding: 120px 0;
+  background: rgba(167, 196, 76, 0.9);
+}
+#team h2,
+#team p {
+  color: #fff;
+}
+#team hr {
+  background: #fff;
+}
+#team h3 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 5px 0;
+}
+#team .team-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px 0 50px 0;
+  box-shadow: 15px 0 #96b044;
+}
+#team .thumbnail {
+  background: transparent;
+  border: 0;
+}
+#team .thumbnail .caption {
+  padding-top: 10px;
+}
+#team .thumbnail .caption p {
+  color: #fff;
+}
+/* Contact Section */
+#contact {
+  padding: 120px 0 60px 0;
+  background: #f6f6f6;
+}
+.contact-item {
+  font-size: x-large;
+}
+
+/* Footer Section*/
+#footer {
+  background: #333;
+  padding: 50px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+#footer .social {
+  margin-bottom: 50px;
+}
+#footer .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#footer .social i.fa {
+  font-size: 26px;
+  padding: 4px;
+  color: #a7c44c;
+  transition: all 0.3s;
+}
+#footer .social i.fa:hover {
+  color: #eee;
+}
+#footer p {
+  font-size: 15px;
+}
+#footer a {
+  color: #999;
+}
+#footer a:hover {
+  color: #a7c44c;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  background: whitesmoke;
+}
+::-webkit-scrollbar-thumb {
+  height: 200px;
+  position: relative;
+  background: linear-gradient(#50559c, #c4f041);
+  border-radius: 10px;
+}
+</style>
+
 </head>
-<body>
-   <!-- header part   -->
-
-    <nav>
-        <h3>Vraj Creation</h3>
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">services</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">form</a></li>
-        </ul>
-    </nav>
-
-<!-- header part end -->
-
-<!-- main part -->
-
-<div class="main-container">
-    <h1>Hey Guys</h1>
-    <p class="p-main">I Am Vraj Shah</p><p class="p-main">I am study in silver oak university and I am a devloper and I give my best try
-        to my gratuation life and best carrer and whole future..!!
-    </p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  
+<header id="header" >
+  <div class="wrapper" id="header2" style="width: 100%;">
+        <div class="logo">
+          <a style="color:black" href="index.html">ELEGANCE INTERIOR DESING</a>
+        </div>
+        <nav >
+          <a href="contact.html">CONTACT &nbsp;</a>
+          <a href="our_team.html">TEAM &nbsp;</a>
+          <a href="aboutus.html">ABOUT US &nbsp;</a>
+          <a href="design.html">DESIGNS &nbsp;</a>
+        </nav>
+  </div>
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row" style="display: flex; justify-content: center;">
+          <div class="intro-text">
+            <h1 class="main-heading"><strong style="color: black;">ELEGANCE DESIGNS</strong> <span>/</span>Interior Desing Studio</h1>
+            <p style="color: black;">We listen, We create, You enjoy</p>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div style="text-align: center; padding-top: 500px; padding-bottom: 500px;">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" />
+<h1>LUXE LIVING
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "Stylish.", "Classy.", "Trendy.", "The best.", "Custom made for you." ]'></span>
+</h1>
 </div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div>
+      <h2>Our Story</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div> <img src="img/about.jpg" class="img-responsive" alt=""> </div>
+      <div>
+        <div class="about-text">
+          <h3>The Studio</h3>
+          <p>We are a progressive full-service design, architectural, interiors and project management studio based in Melbourne, Australia. We specialise in commercial, residential and office projects. We create exceptional spaces, delivered with clarity, made for people.</p>
+          <h3>How We Work</h3>
+          <p>We listen first. Then we work with our clients and key stakeholders to develop distinctive spaces that are unique to each organization’s preferences, priorities and personality. Our goal is to provide an experience that is collaborative, creative and educational in an atmosphere that fosters teamwork and mutual respect. Focus groups are a key part of our typical interior design services, to provide an efficient forum for soliciting ideas and comments from various groups.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services Section -->
+<div id="services">
+  <div class="container">
+    <div >
+      <h2>Our Services</h2>
+      <hr><br>
+    </div>
+    <div class="row" style="display: flex; justify-content: space-evenly; text-align: center;">
+      <div > <a href="residential.html"><img src="img/residential-design.jpg" class="img-responsive" alt="Project Title"></a>
+        <h3>Residential Design</h3>
+        <p>A look inside the offices of some of the world's leading companies and creative businesses, with the best office interior architecture and design.</p>
+      </div>
+      <div > <a href="office.html"><img src="img/office-design.jpg" class="img-responsive" alt="Project Title"></a>
+        <h3>Office Design</h3>
+        <p>Changing people's home changing people's lifestyle the best in class interior design complemented with supreme and premium decor that suits you.</p>
+      </div>
+      <div> <a href="commercial.html"><img src="img/commercial-design.jpg" class="img-responsive" alt="Project Title"></a>
+        <h3>Commercial Design</h3>
+        <p>Commercial interior design plays a pivotal role in the success of any business it includes hotels and lounges, restaurants, retail spaces and everything in between</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div>
+      <h2>Projects</h2>
+      <hr><br>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="gallery.html" data-filter="*" class="active">All Projects</a></li>
+            <li><a href="residential.html" data-filter=".residential">Residential</a></li>
+            <li><a href="office.html" data-filter=".office">Office</a></li>
+            <li><a href="commercial.html" data-filter=".commercial">Commercial</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row" style="display: flex;flex-wrap: wrap;">
+      <div class="portfolio-items"  style="display: flex;flex-wrap: wrap;justify-content: center;">
+    
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="residential.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Living Area</h4>
+              </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+ 
+       
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="office.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>JP Morgan Chase</h4>
+              </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+      
 
-<!-- main part end -->
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="commercial.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Cafe</h4>
+              </div>
+              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+    
+
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="residential.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Balcony Layout</h4>
+              </div>
+              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
 
 
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="residential.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Bedroom</h4>
+              </div>
+              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+ 
+      
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="office.html" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Medical Center</h4>
+              </div>
+              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+     
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team Section -->
+<div id="team" class="text-center">
+  <div class="overlay">
+    <div class="container">
+      <div>
+        <h2>Meet the Team</h2>
+        <hr>
+      </div>
+      <div id="row" style="display: flex;justify-content: space-evenly;">
 
-<div class="card">
+          <div class="thumbnail"> <a href="our_team.html"><img src="img/team/01.jpg" alt="..." class="team-img"></a>
+            <div class="caption">
+              <h3>VRAJ SHAH</h3>
+              <p>CEO & Co-founder</p>
+            </div>
+          </div>
+      
+          <div class="thumbnail"> <a href="our_team.html"><img src="img/team/02.jpg" alt="..." class="img-circle team-img"></a>
+            <div class="caption">
+              <h3>YASH soni</h3>
+              <p>CFO & Co-founder</p>
+            </div>
+          </div>
+          
+          <div class="thumbnail"> <a href="our_team.html"><img src="img/team/03.jpg" alt="..." class="img-circle team-img"></a>
+            <div class="caption">
+              <h3>Rahi soni</h3>
+              <p>Senior Designer</p>
+            </div>
+          </div>
+        
 
-
-    <div class="cards">
-    <h3>instagram</h3>
-    <p>this is instagram cards this is most used in out website
-        instagram update is avilable max to max 2 hours
-    </p>
+          <div class="thumbnail"> <a href="our_team.html"><img src="img/team/04.jpg" alt="..." class="img-circle team-img"></a>
+            <div class="caption">
+              <h3>Aesha chavda</h3>
+              <p>Head Architect</p>
+            </div>
+          </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact">
+  <div class="container" style="text-align: center;">
+    <div class="section-title text-center">
+      <h2>Contact Us</h2>
+      <hr>
     </div>
 
-    <div class="cards">
-    <h3>snapchat</h3>
-    <p>this is snapchat cards this is most used in out website
-        instagram update is avilable max to max 3 hours
-    </p>
+      <h3>Contact Info</h3>
+      <div class="contact-item"> <span>Address</span>
+        <p>silveroak university<br>
+</br> naranpura ahemdabad</p>
+      </div>
+      <div class="contact-item"> <span>Email</span>
+        <p>luxliving@gmail.com</p>
+      </div>
+      <div class="contact-item"> <span>Phone</span>
+        <p>+91 9624223897</p>
+      </div>
+
+  
+        <div id="success"></div>
+        <a href="contact.html"><button type="submit" class="btn btn-custom btn-lg">Leave us a Message</button></a>
+
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div class="social" >
+      <ul>
+            <li>
+              <a
+                href="https://www.facebook.com"
+                onclick="window.alert('Thank you for visiting NEST.');"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                onclick="window.alert('Thank you for visiting NEST.');"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Google%2B"
+                onclick="window.alert('Thank you for visiting NEST.');"
+                ><i class="fab fa-google-plus"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://in.pinterest.com"
+                onclick="window.alert('Thank you for visiting NEST.');"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com"
+                onclick="window.alert('Thank you for visiting NEST.');"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
     </div>
-
-    <div class="cards">
-    <h3>google</h3>
-    <p>this is snapchat cards this is most used in out website
-        instagram update is avilable max to max 4 hours
-    </p>
-</div>
+    <div>
+      <p style="text-align: center;color:aliceblue">&copy; 2023 NEST. All rights reserved. <br><br>Designed by ERNO 1291,1118,1374,1688,0409</p>
+    </div>
+  </div>
 </div>
 
+<script>
+  var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = 1500;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
 
-<div class="form">
-    <div class="forms">
-    <h2>Fill the Form.!!</h2>
-<input type="text" id="v1v2" placeholder="username">
-<input type="text" id="v1v2" placeholder="password">
-<input class="btn" type="button" value="submit">
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-</div>
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
+  var that = this;
+  var delta = 300 - Math.random() * 100;
 
+  if (this.isDeleting) { delta /= 2; }
 
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
 
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
 
-
-
-
-
+window.onload = function() {                                     //main func
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period); //Json.parse is to parse the array present in html
+    }
+  }
+  
+  // var css = document.createElement("style");
+  // css.type = "text/css";
+  // css.innerHTML = ".txt-rotate{ border-right: 0.08em solid #666 }";
+  // document.body.appendChild(css);
+};
+</script>
 </body>
 </html>
